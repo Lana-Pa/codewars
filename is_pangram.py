@@ -7,9 +7,28 @@
 
 import string
 
-def is_pangram(s):
-    all = string.ascii_letters
-    for char in s:
-        if char in all:
+# delete all unnecessary chars in string
+# def is_pangram(s):
+#     all = set(string.ascii_lowercase)
+#     s = s.lower().replace(" ", "")
+#     s = set(list(filter(lambda x: x not in string.punctuation and x not in string.digits, s)))
+#
+#
+#     if s == all:
+#         return True
+#     else:
+#         return False
 
-    return False
+#faster way
+def is_pangram(s):
+
+    s = s.lower()
+    for char in string.ascii_lowercase:
+        if char not in s:
+            return False
+    return True
+
+
+pangram = "ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"
+
+print(is_pangram(pangram))
