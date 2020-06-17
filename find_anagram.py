@@ -27,8 +27,15 @@
 #
 #     return anagrams
 
+# filter version
+# def anagrams(word, words):
+#     return filter(lambda x: sorted(word) == sorted(x), words)
+
+
 # short version
 def anagrams(word, words): return [item for item in words if sorted(item)==sorted(word)]
+
+
 
 
 

@@ -12,26 +12,25 @@
 # "aA11" -> 2 # 'a' and '1'
 # "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-def duplicate_count(text):
-    text_low = text.lower()
-    dups = {}
-    count = 0
-
-    for char in text_low:
-        if char in dups:
-            dups[char] += 1
-        else:
-            dups[char] = 1
-
-    for key, value in dups.items():
-        if value > 1:
-            count += 1
-
-    print(count)
+# def duplicate_count(text):
+#     text_low = text.lower()
+#     dups = {}
+#     count = 0
+#
+#     for char in text_low:
+#         if char in dups:
+#             dups[char] += 1
+#         else:
+#             dups[char] = 1
+#
+#     for key, value in dups.items():
+#         if value > 1:
+#             count += 1
+#
+#     print(count)
 
 # list comprehension
-
-def duplicate_count_comp(s):
+def duplicate_count(s):
     return len([c for c in set(s.lower()) if s.lower().count(c) > 1])
 
 
