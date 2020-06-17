@@ -6,11 +6,15 @@
 # Note: If the number is a multiple of both 3 and 5, only count it once.
 
 def solution(number):
-    nums = range(3,number)
+    nums = range(number)
 
     multiples = list(filter(lambda x: x%3 == 0 or x% 5 == 0, nums))
 
     return sum(multiples)
+
+# shorter version
+# def solution(number):
+#     return sum(x for x in range(number) if x % 3 == 0 or x % 5 == 0)
 
 
 print(solution(10))
