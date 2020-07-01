@@ -6,8 +6,8 @@ def count_words(file):
     dic = {}
 
     for line in file:
-        line = line.lower()
-        line = re.sub(r'[.,:?!:;[{}]', '', line)
+        line.lower()
+        re.sub(r'[.,:?!:;[{}]', '', line)
         words = line.split()
         for word in words:
             if word not in dic:

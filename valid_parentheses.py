@@ -41,4 +41,3 @@ def valid_parentheses(string):
 
 
 
-print(valid_parentheses(')'))
