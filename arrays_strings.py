@@ -30,11 +30,3 @@
 def in_array(a1, a2):
     return sorted(set(s1 for s1 in a1 if any(s1 in s2 for s2 in a2)))
 
-
-
-
-
-a1 = ["live", "arp", "strong"]
-a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
-r = ['arp', 'live', 'strong']
-print(in_array(a1, a2))

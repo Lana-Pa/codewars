@@ -8,7 +8,7 @@ def add_binary(a,b):
     return bin(a+b)[2:]
 
 # format option
-def add_binary(a,b):
+def add_binary_format(a,b):
     return '{0:b}'.format(a + b)
 
 # using recursion
@@ -17,9 +17,9 @@ def convert_dec_bin(num):
         convert_dec_bin(num//2)
         print(num % 2, end='')
 
-def add_binary(a,b):
+def add_binary_recursion(a,b):
     sum = a+b
     convert_dec_bin(sum)
 
 
-add_binary(51,12)
+print(add_binary_format(51,12))
